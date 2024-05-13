@@ -2,19 +2,29 @@
 import sys
 
 def factorial(n):
-    result = 1
-    while n > 1:
-        result *= n
-        n = n - 1
-    return result
+    if n < 0:
+        return "Factorial is not defined for negative numbers"
+    elif n == 0:
+        return 1
+    else: 
+        result = 1 
+        for i in range(1,n + 1):
+            result *= i
+            return result
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) != 2:
-        print("Usage: ./script.py <number>")
+        print("Usage: {} <number>".format(sys.argv[0]))
         sys.exit(1)
-    
+
     try:
-        f = factorial(int(sys.argv[1]))
-        print(f)
+        n = int(sys.argv[1]
     except ValueError:
-        print("Please provide a valid integer as input.")
+        print("Error: Please provide an integer as input")
+        sys.exit(1)
+
+    print(factorial(n))
+
+
+if _name_ == "_main_":
+    main()
