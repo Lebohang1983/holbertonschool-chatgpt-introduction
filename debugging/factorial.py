@@ -18,7 +18,7 @@ def main():
         sys.exit(1)
 
     try:
-        n = int(sys.argv[1]
+        n = int(sys.argv[1])
     except ValueError:
         print("Error: Please provide an integer as input")
         sys.exit(1)
@@ -26,5 +26,5 @@ def main():
     print(factorial(n))
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
